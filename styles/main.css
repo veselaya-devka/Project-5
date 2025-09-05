@@ -58,7 +58,7 @@ p {
 
 h1,
 h2 {
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #000;
 }
 
@@ -208,12 +208,72 @@ button:hover {
   font-size: 21px;
 }
 
+.skills {
+  padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
+}
+
+.skills_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
+.skills_block .left {
+  width: 38.9%;
+  padding-top: 6.3rem;
+}
 
+.skills_block img {
+  width: 48.2%;
+  height: 446px;
+  object-fit: contain;
+}
 
+.skills_block .left h2 {
+  font-family: var(--font-family-500);
+  font-size: 32px;
+}
 
+.progresses {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  gap: 1.1rem;
+}
 
+.progress {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress p {
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  padding-top: 1rem;
+}
+
+.line .grey {
+  width: inherit;
+  height: inherit;
+  background: #c4c4c4;
+}
+
+.line .blue {
+  background: #34547a;
+  width: 78.4%;
+  height: inherit;
+  position: relative;
+  bottom: 4px;
+}
 
 
 
@@ -256,6 +316,29 @@ button:hover {
   .first_screen_block .text button {
     align-self: center;
   }
+
+  .skills_block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills_block .left {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .skills_block .left,
+  .skills_block img {
+    width: 90%;
+  }
+
+  .progress {
+    align-items: center;
+  }
+
+  .skills_block img {
+    padding-top: 6.3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -274,7 +357,13 @@ button:hover {
     font-size: 2rem;
   }
 
-  .about_me h2 {
-    font-size: 1.8rem;
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills_block img {
+    padding-top: 0;
   }
 }
