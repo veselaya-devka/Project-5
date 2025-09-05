@@ -305,6 +305,58 @@ button:hover {
   margin-top: 3rem;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 1.9rem;
+}
+
+.projects .project {
+  width: 25%;
+  position: relative;
+  /* добавлено для позиционирования псевдоэлемента */
+  overflow: hidden;
+  /* чтобы псевдоэлемент не выходил за пределы */
+}
+
+.projects .project img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  display: block;
+  /* убрать возможные пробелы под изображением */
+}
+
+.projects .project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(52, 84, 122, 0.8);
+  background-image: url('../img/7.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22%;
+  /* или cover, в зависимости от задачи */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+  /* чтобы не мешать наведению */
+}
+
+.projects .project:hover::before {
+  opacity: 1;
+}
+
+
+
+
+
+
 @media screen and (max-width: 1200px) {
   .numbers_block {
     justify-content: center;
@@ -314,6 +366,12 @@ button:hover {
 @media screen and (max-width: 1150px) {
   .container {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .projects .project {
+    width: 50%;
   }
 }
 
@@ -386,6 +444,10 @@ button:hover {
 
   h2 {
     font-size: 1.8rem !important;
+  }
+
+  .projects .project {
+    width: 100%;
   }
 }
 
