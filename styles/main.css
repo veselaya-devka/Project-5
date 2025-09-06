@@ -227,7 +227,6 @@ button:hover {
 
 .skills_block img {
   width: 48.2%;
-  height: 446px;
   object-fit: contain;
 }
 
@@ -269,7 +268,6 @@ button:hover {
 
 .line .blue {
   background: #34547a;
-  /* width: 78.4%; */
   height: inherit;
   position: relative;
   bottom: 4px;
@@ -315,9 +313,7 @@ button:hover {
 .projects .project {
   width: 25%;
   position: relative;
-  /* добавлено для позиционирования псевдоэлемента */
   overflow: hidden;
-  /* чтобы псевдоэлемент не выходил за пределы */
 }
 
 .projects .project img {
@@ -325,7 +321,6 @@ button:hover {
   object-fit: cover;
   height: 100%;
   display: block;
-  /* убрать возможные пробелы под изображением */
 }
 
 .projects .project::before {
@@ -340,12 +335,10 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 22%;
-  /* или cover, в зависимости от задачи */
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
   pointer-events: none;
-  /* чтобы не мешать наведению */
 }
 
 .projects .project:hover::before {
@@ -576,9 +569,6 @@ form button {
 }
 
 @media screen and (max-width: 400px) {
-  .skills_block img {
-    padding-top: 0;
-  }
 
   form {
     width: 90%;
@@ -586,6 +576,7 @@ form button {
 
   .footer_block {
     gap: 5%;
+    align-items: center;
   }
 
   .footer_block .right {
