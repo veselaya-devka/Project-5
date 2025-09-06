@@ -352,7 +352,15 @@ button:hover {
   opacity: 1;
 }
 
+.clients {
+  padding: 4.5rem 0;
+}
 
+.clients_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 
 
@@ -366,6 +374,11 @@ button:hover {
 @media screen and (max-width: 1150px) {
   .container {
     width: 90%;
+  }
+
+  .clients_block {
+    justify-content: center;
+    gap: 2.5%;
   }
 }
 
